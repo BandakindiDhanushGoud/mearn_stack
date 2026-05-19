@@ -1,0 +1,97 @@
+/* BACKGROUND */
+.checkout-bg {
+  min-height: 100vh;
+  padding: 20px;
+
+  background:
+    radial-gradient(circle at top, rgba(212,175,55,0.15), transparent 50%),
+    linear-gradient(135deg, #0f0f0f, #1a1a1a, #f5f6fa);
+}
+
+/* CARD */
+.checkout-card {
+  width: 450px;
+  background: rgba(255,255,255,0.96);
+  padding: 30px;
+  border-radius: 18px;
+
+  box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+  backdrop-filter: blur(10px);
+
+  animation: fadeUp 0.6s ease;
+}
+
+/* HEADER */
+.checkout-header h2 {
+  font-weight: bold;
+  color: #111;
+}
+
+.checkout-header p {
+  font-size: 13px;
+  color: #777;
+  margin-bottom: 20px;
+}
+
+/* LABEL */
+label {
+  font-weight: 600;
+  font-size: 14px;
+  color: #111;
+  margin-bottom: 5px;
+}
+
+/* FIELD SPACING */
+.field {
+  margin-bottom: 15px;
+}
+
+/* INPUTS */
+.form-control {
+  border-radius: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  transition: 0.3s;
+}
+
+.form-control:focus {
+  border-color: #d4af37;
+  box-shadow: 0 0 8px rgba(212,175,55,0.3);
+}
+
+/* PRICE SPECIAL STYLE */
+.price-input {
+  color: #b8860b;
+  font-weight: bold;
+}
+
+/* BUTTON */
+.btn-place {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 12px;
+
+  background: linear-gradient(45deg, #d4af37, #b8860b);
+  color: black;
+
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn-place:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(212,175,55,0.4);
+}
+
+/* ANIMATION */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

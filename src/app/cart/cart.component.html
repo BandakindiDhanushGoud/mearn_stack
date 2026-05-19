@@ -1,0 +1,35 @@
+<div class="cart-bg">
+  <div class="container">
+    <h2 class="cart-title text-center">🛒 Your Cart</h2>
+    <div class="row g-4">
+      <div class="col-md-4" *ngFor="let item of cart$ | async">
+        <div class="cart-card">
+
+          <div class="img-box">
+            <img [src]="item.image" class="cart-img">
+          </div>
+
+          <div class="cart-body">
+            <h5 class="name">{{ item.name }}</h5>
+            <p class="desc">{{ item.description }}</p>
+            <div class="price">
+              ₹ {{ item.price }}
+            </div>
+          </div>
+
+          <div class="card-footer d-flex justify-content-between">
+
+            <button class="btn btn-primary" (click)="buyProduct(item)">
+              Buy Now
+            </button>
+
+            <button class="btn btn-danger" (click)="removeFromCart(item.id)">
+              Remove
+            </button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

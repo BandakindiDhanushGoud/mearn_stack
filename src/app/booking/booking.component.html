@@ -1,0 +1,38 @@
+<div class="orders-bg">
+  <div class="container">
+    <h2 class="orders-title text-center">📦 Admin Booking Panel</h2>
+    <div class="row g-4">
+      <div class="col-md-4" *ngFor="let item of orders$ | async">
+        <div class="order-card">
+
+          <div class="img-box">
+            <img [src]="item.image" class="order-img">
+          </div>
+
+          <div class="order-body">
+            <h5 class="name">{{ item.name }}</h5>
+            <div class="price">₹ {{ item.price }}</div>
+            <span class="status">
+              {{ item.status }}
+            </span>
+
+            <div class="user-details">
+              <p><strong>Email:</strong> {{ item.email }}</p>
+              <p><strong>Phone:</strong> {{ item.phone }}</p>
+              <p><strong>Address:</strong> {{ item.address }}</p>
+            </div>
+            
+          </div>
+
+          <div class="order-footer">
+
+            <button class="delete-btn" (click)="removeOrder(item.orderId)">
+              🗑 Delete
+            </button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

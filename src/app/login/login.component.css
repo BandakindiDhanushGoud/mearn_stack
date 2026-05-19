@@ -1,0 +1,115 @@
+/* BACKGROUND - DARK LUXURY WATCH STYLE */
+.login-bg {
+  height: 100vh;
+  background: url('https://images.unsplash.com/photo-1523275335684-37898b6baf30')
+              no-repeat center center/cover;
+  position: relative;
+}
+
+/* DARK OVERLAY */
+.login-bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.75);
+}
+
+/* LOGIN CARD */
+.login-card {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  padding: 30px;
+
+  background: rgba(20, 20, 20, 0.85);
+  backdrop-filter: blur(15px);
+
+  border-radius: 18px;
+  border: 1px solid rgba(255, 215, 0, 0.2);
+
+  box-shadow: 0 10px 40px rgba(233, 227, 227, 0.6);
+  color: white;
+
+  animation: fadeUp 0.8s ease;
+}
+
+/* ENTRY ANIMATION */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* BRAND TEXT */
+.brand-title {
+  color: gold;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.brand-subtitle {
+  font-size: 13px;
+  color: #aaa;
+}
+
+/* INPUT STYLE */
+.custom-input {
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid rgba(255,215,0,0.3);
+  color: white;
+  border-radius: 0;
+  padding: 10px;
+}
+
+.custom-input:focus {
+  background: transparent;
+  color: white;
+  border-bottom: 2px solid gold;
+  box-shadow: none;
+}
+
+/* LABEL */
+label {
+  color: #ccc;
+  font-size: 13px;
+}
+
+/* GOLD BUTTON */
+.btn-gold {
+  background: linear-gradient(45deg, #d4af37, #b8860b);
+  border: none;
+  color: black;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.btn-gold:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255,215,0,0.4);
+}
+
+
+/* LINK BUTTON */
+.text-gold {
+  color: gold;
+  text-decoration: none;
+}
+
+.text-gold:hover {
+  color: #ffd700;
+}
+
+::placeholder {
+  color: white;
+}

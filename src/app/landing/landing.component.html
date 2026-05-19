@@ -1,0 +1,50 @@
+<div class="home">
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Timeless Luxury</h1>
+      <p>Experience elegance crafted to perfection</p>
+      <button routerLink="/user/viewproduct">Explore Collections</button>
+    </div>
+  </section>
+
+  <section class="feature-strip">
+    <div class="feature">
+      <h3>Premium Craft</h3>
+      <p>Swiss-level precision watches</p>
+    </div>
+    <div class="feature">
+      <h3>Luxury Design</h3>
+      <p>Crafted for elite style</p>
+    </div>
+    <div class="feature">
+      <h3>Exclusive</h3>
+      <p>Limited collections only</p>
+    </div>
+  </section>
+
+  <section class="products">
+    <h2>Collections</h2>
+    <div class="cards">
+      <div class="card" *ngFor="let item of mockProducts">
+
+        <div class="img">
+          <img [src]="item.image">
+        </div>
+
+        <div class="info">
+          <h4>{{item.name}}</h4>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="parallax">
+    <div>
+      <h2>Crafted For Perfection</h2>
+      <p>Every second matters</p>
+    </div>
+  </section>
+
+</div>

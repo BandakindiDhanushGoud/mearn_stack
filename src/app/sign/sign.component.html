@@ -1,0 +1,18 @@
+<div class="signup-container">
+
+  <h2>Create Account</h2>
+
+  <input type="text" placeholder="Enter Full Name" [(ngModel)]="fullname" name="fullname" class="form-control">
+
+  <input type="email" placeholder="Enter Email" [(ngModel)]="email" name="email" class="form-control">
+
+  <input type="password" placeholder="Enter Password" [(ngModel)]="password" name="password" class="form-control">
+
+  <input type="password" placeholder="Confirm Password" [(ngModel)]="confirmPassword" name="confirmPassword"
+    class="form-control">
+
+  <button class="signup-btn" (click)="register()">
+    Sign Up
+  </button>
+
+</div>

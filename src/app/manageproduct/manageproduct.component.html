@@ -1,0 +1,76 @@
+<div class="admin-bg">
+  <div class="container">
+    
+   
+    <h2 class="admin-title text-center"> Manage Products</h2>
+
+   
+    <div class="add-card">
+      <h5 class="mb-3"> Add New Product</h5>
+      <div class="row g-3">
+
+        <div class="col-md-3">
+          <input [(ngModel)]="product.name" class="form-control" placeholder="Product Name">
+        </div>
+
+        <div class="col-md-2">
+          <input [(ngModel)]="product.price" class="form-control" placeholder="Price">
+        </div>
+
+        <div class="col-md-4">
+          <input [(ngModel)]="product.image" class="form-control" placeholder="Image URL">
+        </div>
+
+        <div class="col-md-4">
+          <textarea [(ngModel)]="product.description" class="form-control" placeholder="Enter Description"></textarea>
+        </div>
+
+        <div class="col-md-3">
+          <button class="btn-add w-100" (click)="addProduct()">Add Product</button>
+        </div>
+
+      </div>
+    </div>
+
+  
+    <div class="table-card">
+
+      <div class="table-header">
+     
+      </div>
+
+      <table class="table table-hover mb-0">
+
+        <thead>
+          <tr>
+            <th>Image</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+
+        <tbody>
+
+          <tr *ngFor="let p of products">
+            <td>
+              <img [src]="p.image" class="product-img">
+            </td>
+            <td class="fw-bold">{{p.name}}</td>
+            <td class="desc">{{p.description}}</td>
+            <td class="price">₹ {{p.price}}</td>
+            <td class="actions">
+              <button class="btn-delete" (click)="delete(p.id)">Delete</button>
+              <button class="btn-edit" (click)="edit(p)"> Edit</button>
+            </td>
+          </tr>
+
+        </tbody>
+
+      </table>
+
+    </div>
+
+  </div>
+</div>

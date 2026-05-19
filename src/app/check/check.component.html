@@ -1,0 +1,52 @@
+<div class="checkout-bg d-flex justify-content-center align-items-center">
+  <div class="checkout-card">
+
+
+    <div class="checkout-header text-center">
+      <h2>🧾 Order Details</h2>
+      <p>Complete your luxury watch purchase</p>
+    </div>
+
+    <form [formGroup]="checkoutForm" (ngSubmit)="placeOrder()">
+
+      <div class="field">
+        <label>Product Name</label>
+        <input class="form-control" formControlName="name" readonly>
+      </div>
+
+      <div class="field">
+        <label>Price</label>
+        <input class="form-control price-input" formControlName="price" readonly>
+      </div>
+
+      <div class="field">
+        <label>Email</label>
+        <input class="form-control" formControlName="email" placeholder="Enter your email">
+        <small class="text-danger" *ngIf="checkoutForm.get('email')?.invalid && checkoutForm.get('email')?.touched">
+          Valid email is required.
+        </small>
+      </div>
+
+      <div class="field">
+        <label>Phone Number</label>
+        <input class="form-control" formControlName="phone" placeholder="Enter 10-digit number">
+        <small class="text-danger" *ngIf="checkoutForm.get('phone')?.invalid && checkoutForm.get('phone')?.touched">
+          Phone number is required.
+        </small>
+      </div>
+
+      <div class="field">
+        <label>Shipping Address</label>
+        <textarea class="form-control" formControlName="address" placeholder="Enter delivery address"></textarea>
+        <small class="text-danger" *ngIf="checkoutForm.get('address')?.invalid && checkoutForm.get('address')?.touched">
+          Shipping address is required.
+        </small>
+      </div>
+
+      <button class="btn-place" type="submit">
+        Place Order
+      </button>
+
+    </form>
+  </div>
+</div>

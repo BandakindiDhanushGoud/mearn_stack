@@ -1,0 +1,88 @@
+
+.product-bg {
+  min-height: 100vh;
+  padding: 30px;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(0,0,0,0.80),
+      rgba(0,0,0,0.60)
+    ),
+    url('https://images.unsplash.com/photo-1524805444758-089113d48a6d?q=80&w=1600')
+    no-repeat center center;
+
+  background-size: cover;
+  background-attachment: fixed;
+}
+/* PRODUCT CARD (GLASS LUXURY STYLE) */
+.product-card {
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 16px;
+  overflow: hidden;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+  backdrop-filter: blur(10px);
+
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 45px rgba(0,0,0,0.35);
+}
+
+/* IMAGE BOX (SOFT DARK BORDER) */
+.img-box {
+  background: linear-gradient(135deg, #1a1a1a, #2c2c2c);
+  padding: 15px;
+  text-align: center;
+}
+
+.product-img {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+  transition: 0.4s;
+}
+
+.product-card:hover .product-img {
+  transform: scale(1.1);
+}
+
+/* BODY */
+.product-body {
+  padding: 15px;
+  text-align: center;
+}
+
+/* TITLE (DARK LUXURY TEXT) */
+.product-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #111;
+}
+
+/* PRICE (GOLD LUXURY LOOK) */
+.product-price {
+  color: #d4af37;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+/* BUTTON (GOLD PREMIUM) */
+.view-btn {
+  background: linear-gradient(45deg, #d4af37, #b8860b);
+  color: black;
+  border: none;
+  padding: 9px 14px;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.view-btn:hover {
+  transform: scale(1.06);
+  box-shadow: 0 10px 25px rgba(212,175,55,0.4);
+}

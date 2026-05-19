@@ -1,0 +1,38 @@
+<div class="wishlist-bg">
+  <div class="container">
+
+    <!-- HEADER -->
+    <div class="wishlist-header text-center">
+      <h2>❤️ Your Wishlist</h2>
+      <p>Saved luxury timepieces</p>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-md-4" *ngFor="let item of wishlist$ | async">
+        <div class="wish-card">
+
+          <!-- IMAGE -->
+          <div class="img-wrapper">
+            <img [src]="item.image" class="wish-img">
+            <span class="heart">❤️</span>
+          </div>
+
+          <!-- CONTENT -->
+          <div class="wish-content">
+            <h5 class="name">{{ item.name }}</h5>
+            <p class="desc">{{ item.description }}</p>
+            <div class="price">₹ {{ item.price }}</div>
+
+            <!-- ACTIONS -->
+            <div class="actions">
+              <button class="btn-cart" (click)="addToCart(item)"> Add to Cart</button>
+              <button class="btn-remove" (click)="removeFromWishlist(item.id)">Remove</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

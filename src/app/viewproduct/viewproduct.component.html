@@ -1,0 +1,25 @@
+<div class="product-bg">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-md-3" *ngFor="let p of products">
+
+
+        <div class="product-card" (click)="goToDetails(p.id)">
+
+
+          <div class="img-box">
+            <img [src]="p.image" class="product-img">
+          </div>
+
+          <div class="product-body">
+            <h5 class="product-title">{{p.name}}</h5>
+            <p class="product-price">₹ {{p.price}}</p>
+            <button class="view-btn">View Details</button>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

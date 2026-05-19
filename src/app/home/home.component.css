@@ -1,0 +1,104 @@
+.home {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top, rgba(212,175,55,0.15), transparent 60%),
+    linear-gradient(135deg, #0f0f0f, #1a1a1a);
+
+  color: white;
+  text-align: center;
+  padding: 30px;
+}
+
+/* HERO */
+.hero {
+  padding: 60px 20px;
+}
+
+.title {
+  font-size: 60px;
+  color: #d4af37;
+  animation: fadeUp 1s ease;
+}
+
+.subtitle {
+  color: #ccc;
+  margin-top: 10px;
+}
+
+.explore-btn {
+  margin-top: 20px;
+  padding: 12px 28px;
+  border-radius: 12px;
+  border: none;
+
+  background: linear-gradient(45deg, #d4af37, #b8860b);
+  color: black;
+  font-weight: bold;
+}
+
+/* FEATURED SECTION */
+.featured {
+  margin-top: 50px;
+}
+
+.watch-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.watch-card {
+  width: 250px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 15px;
+  padding: 15px;
+
+  backdrop-filter: blur(10px);
+  transition: 0.3s;
+}
+
+.watch-card:hover {
+  transform: translateY(-10px);
+}
+
+.watch-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* WHY SECTION */
+.why {
+  margin-top: 60px;
+}
+
+.why-boxes {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.why-card {
+  background: rgba(212,175,55,0.1);
+  padding: 12px 18px;
+  border-radius: 10px;
+}
+
+/* ANIMATION */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+h2:hover {
+  color: #ffc107; /* Bootstrap warning color */
+}
+
+.explore-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255,215,0,0.4);
+}

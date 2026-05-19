@@ -1,0 +1,32 @@
+<div class="details-bg d-flex justify-content-center align-items-center">
+  <div class="product-card">
+
+    <div class="image-box">
+      <img [src]="product.image" class="product-img">
+    </div>
+
+   
+    <div class="content-box">
+      <h2 class="title">{{product.name}}</h2>
+      <p class="desc">{{product.description}}</p>
+      <div class="price-tag">
+        💰 Price: ₹{{product.price}}
+      </div>
+
+      <div class="btn-group">
+        <button class="btn-cart" (click)="addToCart(product)">
+          Add to Cart
+        </button>
+
+        <button class="btn-wish" (click)="addToWishlist(product)">
+          Wishlist
+        </button>
+
+        <button class="btn-buy" (click)="buyProduct(product)">
+          Buy Now
+        </button>
+
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,91 @@
+/* BACKGROUND */
+.cart-bg {
+  min-height: 100vh;
+  padding: 40px;
+
+  background:
+    radial-gradient(circle at top, rgba(212,175,55,0.10), transparent 45%),
+    linear-gradient(135deg, #0f0f0f, #1a1a1a, #f5f6fa);
+}
+
+/* TITLE */
+.cart-title {
+  color: white;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* CART CARD */
+.cart-card {
+  background: rgba(255,255,255,0.95);
+  border-radius: 18px;
+  overflow: hidden;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+  transition: 0.3s;
+}
+
+.cart-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 45px rgba(0,0,0,0.35);
+}
+
+/* IMAGE */
+.img-box {
+  background: linear-gradient(135deg, #1a1a1a, #2c2c2c);
+  padding: 15px;
+  text-align: center;
+}
+
+.cart-img {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+  transition: 0.4s;
+}
+
+.cart-card:hover .cart-img {
+  transform: scale(1.08);
+}
+
+/* BODY */
+.cart-body {
+  padding: 15px;
+}
+
+/* NAME */
+.name {
+  font-weight: 600;
+  color: #111;
+}
+
+/* DESCRIPTION */
+.desc {
+  font-size: 13px;
+  color: #666;
+}
+
+/* PRICE */
+.price {
+  color: #d4af37;
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+/* CARD FOOTER (KEEP BUTTONS SAME LOOK, JUST SPACING) */
+.card-footer {
+  background: transparent;
+  border-top: none;
+  padding: 12px 15px;
+}
+
+/* BUTTON EFFECT ONLY */
+.card-footer .btn {
+  border-radius: 10px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.card-footer .btn:hover {
+  transform: scale(1.05);
+}

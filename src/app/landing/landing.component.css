@@ -1,0 +1,155 @@
+/* GLOBAL */
+.home {
+  font-family: 'Poppins', sans-serif;
+  background: black;
+  color: white;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  background: linear-gradient(rgba(0,0,0,0.5), black),
+              url('https://images.unsplash.com/photo-1524592094714-0f0654e20314')
+              center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-text {
+  text-align: center;
+  animation: fadeUp 1.5s ease;
+}
+
+.hero-text h1 {
+  font-size: 4rem;
+  letter-spacing: 2px;
+}
+
+.hero-text p {
+  color: #bbb;
+  margin: 20px 0;
+}
+
+.hero button {
+  padding: 12px 40px;
+  border-radius: 30px;
+  background: gold;
+  border: none;
+  transition: 0.4s;
+}
+
+.hero button:hover {
+  transform: scale(1.1);
+}
+
+/* FEATURE STRIP */
+.feature-strip {
+  display: flex;
+  justify-content: space-around;
+  padding: 40px;
+  background: #111;
+}
+
+.feature {
+  text-align: center;
+}
+
+/* PRODUCTS */
+.products {
+  padding: 60px;
+}
+
+.products h2 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+/* GLASS CARD */
+.card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  background: rgba(235, 226, 226, 0.856);
+  transition: 0.4s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+/* IMAGE */
+.card .img img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  transition: 0.5s;
+}
+
+.card:hover img {
+  transform: scale(1.1);
+}
+
+/* INFO */
+.info {
+  padding: 15px;
+}
+
+.info span {
+  color: gold;
+}
+
+/* OVERLAY */
+.overlay {
+  position: absolute;
+  bottom: -100%;
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  transition: 0.4s;
+}
+
+.card:hover .overlay {
+  bottom: 0;
+}
+
+.overlay button {
+  background: gold;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 20px;
+}
+
+/* PARALLAX */
+.parallax {
+  height: 60vh;
+  background: url('https://images.unsplash.com/photo-1508057198894-247b23fe5ade')
+              center/cover fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.parallax h2 {
+  font-size: 2.5rem;
+}
+
+/* ANIMATION */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

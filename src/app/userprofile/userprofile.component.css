@@ -1,0 +1,17 @@
+.profile-bg {
+  height: 100vh;
+  background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+}
+
+.profile-card {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  width: 300px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.info p {
+  font-size: 16px;
+  margin: 10px 0;
+}

@@ -1,0 +1,71 @@
+<div class="app-bg">
+
+  <nav class="navbar navbar-expand-md navbar-dark luxury-navbar">
+    <div class="container-fluid">
+      <a class="navbar-brand brand"> WatchVault</a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto align-items-center">
+          <li class="nav-item position-relative me-3 profile-wrapper">
+
+            <div class="profile-btn d-flex align-items-center" (click)="toggleProfile()">
+              <div class="avatar-circle">
+                {{ userEmail?.charAt(0)}}
+              </div>
+              <span class="ms-2 text-white small d-none d-md-block">
+                {{ userEmail }}
+              </span>
+            </div>
+
+            <div *ngIf="showProfile" class="profile-dropdown shadow-lg">
+              <div class="profile-header text-center">
+                <div class="avatar-large">
+                  {{ userEmail?.charAt(0)}}
+                </div>
+                <h6 class="mt-2 mb-0">{{ userEmail }}</h6>
+                <small class="text-muted">User Account</small>
+              </div>
+              <hr>
+              <div class="profile-body">
+                <p><strong>Email:</strong> {{ userEmail }}</p>
+                <p><strong>Password:</strong> {{ userPassword }}</p>
+              </div>
+              <hr>
+              <button class="btn btn-danger w-100" (click)="logout()">Logout</button>
+            </div>
+          </li>
+          <li class="nav-item"><a class="nav-link" routerLink="/user/home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" routerLink="/user/viewproduct">Products</a></li>
+          <li class="nav-item"><a class="nav-link" routerLink="/user/order">Orders</a></li>
+
+          <li class="nav-item" *ngIf="cartCount$ | async as count">
+            <a class="nav-link badge-link" routerLink="/user/cart">
+              Cart <span class="badge-pill" *ngIf="count > 0">{{ count }}</span>
+            </a>
+          </li>
+
+          <li class="nav-item" *ngIf="wishlistCount$ | async as count">
+            <a class="nav-link badge-link" routerLink="/user/wishlist">
+              Wishlist <span class="badge-pill" *ngIf="count > 0">{{ count }}</span>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link logout" (click)="logout()">Logout</a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+ 
+  <div class="page-content">
+    <router-outlet></router-outlet>
+  </div>
+
+</div>

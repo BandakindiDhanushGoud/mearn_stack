@@ -1,0 +1,114 @@
+/* BACKGROUND */
+.admin-bg {
+  min-height: 100vh;
+  padding: 30px;
+
+  background:
+    radial-gradient(circle at top, rgba(212,175,55,0.12), transparent 45%),
+    linear-gradient(135deg, #0f0f0f, #1a1a1a, #f5f6fa);
+}
+
+/* TITLE */
+.admin-title {
+  color: white;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* ADD CARD */
+.add-card {
+  background: rgba(255,255,255,0.96);
+  padding: 20px;
+  border-radius: 16px;
+  margin-bottom: 20px;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+
+/* ADD BUTTON */
+.btn-add {
+  background: linear-gradient(45deg, #d4af37, #b8860b);
+  color: black;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn-add:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(212,175,55,0.3);
+}
+
+/* TABLE CARD */
+.table-card {
+  background: rgba(255,255,255,0.96);
+  border-radius: 16px;
+  overflow: hidden;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+
+/* HEADER */
+.table-header {
+  background: #111;
+  color: #d4af37;
+  padding: 12px;
+  font-weight: bold;
+}
+
+/* IMAGE */
+.product-img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+/* DESCRIPTION */
+.desc {
+  font-size: 13px;
+  color: #666;
+}
+
+/* PRICE */
+.price {
+  color: #d4af37;
+  font-weight: bold;
+}
+
+/* ACTION BUTTONS */
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
+/* DELETE */
+.btn-delete {
+  background: #ff4d4d;
+  border: none;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.btn-delete:hover {
+  background: #e60000;
+  transform: scale(1.05);
+}
+
+/* EDIT */
+.btn-edit {
+  background: #ffc107;
+  border: none;
+  color: black;
+  padding: 6px 10px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.btn-edit:hover {
+  transform: scale(1.05);
+}
